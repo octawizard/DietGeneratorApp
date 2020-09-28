@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Karumi.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.octawizard.ui.view.DietDetailActivity"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.octawizard.screenshot.ui.view.MainActivity"
+        tools:showIn="@layout/main_activity"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_day_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/super_hero_detail_header_height"
+                    tools:ignore="ContentDescription"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_meal_lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="#FFD75E"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/lunch"
+                />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/default_margin"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:text="@string/protein"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_lunch_protein_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <TextView
+                        android:text="@string/vegetable"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_lunch_vegetable_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:text="@string/side_vegetables"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_lunch_side_vegetables_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:text="@string/carbohydrate"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_lunch_carbohydrate_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tv_meal_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/double_default_margin"
+                android:textColor="#FFD75E"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/dinner"
+                />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/default_margin"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:text="@string/protein"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_dinner_protein_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <TextView
+                        android:text="@string/vegetable"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_dinner_vegetable_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:text="@string/side_vegetables"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_dinner_side_vegetables_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:text="@string/carbohydrate"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                    <TextView
+                        android:id="@+id/tv_meal_dinner_carbohydrate_description"
+                        android:gravity="end"
+                        android:padding="3dip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/body_text_size"
+                        />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_empty_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="¯\\_(ツ)_/¯"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            tools:ignore="HardcodedText"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
